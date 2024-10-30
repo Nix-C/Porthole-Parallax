@@ -2,24 +2,20 @@
 <head></head>
     <body class="porthole-container">
         <div class="bg-container">
-            <div class="porthole-15"></div>
         </div>
-        <header>
-            <h2>Porthole.js</h2>
-        </header>
         <main >
             <div class="hero">
                 <div class="porthole-container">
                     <img class="porthole-10" src="porthole-wave_2.svg">
                     <img class="porthole-15" src="porthole-wave_1.svg">
                     <img src="porthole.svg">
-                    <div class="porthole-10"><h2>Welcome to</h3></div>
-                    <div class="porthole-15"><h1>Porthole</h3></div>
+                    <div class="porthole-10"><h2>Welcome to</h2></div>
+                    <div class="porthole-15"><h1>Porthole</h1></div>
                     <div class="hero-3 porthole-10"><h3>A javascript/css parallax effect</h3></div>
-                    
+                    <div class="hero-4 porthole-10"><h4>[ Try Scrolling! ]</h4></div>
                 </div>
-                <div class="subtitle">by Nathaniel Campbell</div>
-        </div>
+                <!-- <div class="subtitle">by Nathaniel Campbell</div> -->
+            </div>
         </main>
         <footer></footer>
         <style>
@@ -42,7 +38,9 @@
                 margin: 0;
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 20px;
-                background-color: #d2e3d1;
+                background-color: #634115;
+                background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png");
+                background-attachment: fixed;
             }      
             h1{
                 font-size: 4em;
@@ -54,27 +52,28 @@
                 font-size: 1.5em;
             }
 
-
-            header{
-                background-color: #d2e3d1;
-                margin: 0;
-                padding: 1vw 0 1vw 1vw;
-            }
             main{
                 height: 120vh;
                 display:flex;
                 flex-direction: column;
                 align-items: center;
             }
+
+
             .bg-container .porthole-15{
                 position: fixed;
                 height: 200%;
                 width: 100%;
-                background-color: #634115;
-                background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png");
+
                 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
                 z-index: -10;
                 transition: none;
+            }
+
+            .hero {
+                height: 100vh;
+                display: flex;
+                position: fixed;
             }
 
             .hero .porthole-container{
@@ -85,12 +84,14 @@
                 --hero_width: min(80vh, 800px);
                 width: var(--hero_width);
                 height: var(--hero_width);
+                margin: auto;
                 border-radius: 100%;
                 background-color: rgb(114, 205, 247);
                 text-align: center;
                 position: relative;
                 overflow: hidden;
             }
+
 
             .hero h1 {
                 font-size: max(4em, 10vw);
@@ -103,7 +104,7 @@
                 border-bottom: solid rgb(5, 61, 61) 3px;
   
             }
-            main .subtitle {
+            /* main .subtitle {
                 position: absolute;
                 bottom: 0;
                 right: 0;
@@ -111,7 +112,7 @@
                 background-color: rgb(5, 61, 61);
                 color: white;
                 box-shadow: -3px -4px 6px 0px #00000047 inset;
-            }
+            } */
             .hero .porthole-container > div {
                 z-index: 1;
             }
