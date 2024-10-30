@@ -1,11 +1,8 @@
-# Porthole Parallax
-###### By Nathaniel Campbell
-==============
+# Porthole Parallax 
 
 This JavaScript snippet can help you create parallax effects within any HTML webpage. You can layer, specify offset, and even make multiple instances of parallax objects.
 
 ## Installation
-================
 
 To install Porthole, add ```porthole.js``` in a script tag to your project footer.
 
