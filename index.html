@@ -6,9 +6,11 @@
         <main >
             <div class="hero">
                 <div class="porthole-container">
-                    <img class="porthole-10" src="porthole-wave_2.svg">
-                    <img class="porthole-15" src="porthole-wave_1.svg">
-                    <img src="porthole.svg">
+                    <div class="img-container">
+                        <img class="porthole-10" src="porthole-wave_2.svg">
+                        <img class="porthole-15" src="porthole-wave_1.svg">
+                        <img src="porthole.svg">
+                    </div>
                     <div class="porthole-10"><h2>Welcome to</h2></div>
                     <div class="porthole-15"><h1>Porthole</h1></div>
                     <div class="hero-3 porthole-10"><h3>A javascript/css parallax effect</h3></div>
@@ -85,13 +87,29 @@
                 width: var(--hero_width);
                 height: var(--hero_width);
                 margin: auto;
-                border-radius: 100%;
-                background-color: rgb(114, 205, 247);
+                
+                
                 text-align: center;
                 position: relative;
-                overflow: hidden;
+                
             }
 
+            .img-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                background-color: rgb(114, 205, 247);
+                width: var(--hero_width);
+                height: var(--hero_width);
+                overflow: hidden;
+                border-radius: 100%;
+            }
+
+            .img-container > img {
+                position: absolute;
+                width: 100%;
+            }            
 
             .hero h1 {
                 font-size: max(4em, 10vw);
@@ -116,10 +134,7 @@
             .hero .porthole-container > div {
                 z-index: 1;
             }
-            .hero img {
-                position: absolute;
-                width: 101%;
-            }
+
         </style>
         <script src="porthole.js"></script>
     </body>
